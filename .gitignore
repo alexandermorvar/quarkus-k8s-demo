@@ -43,3 +43,13 @@ nb-configuration.xml
 /.quarkus/cli/plugins/
 # TLS Certificates
 .certs/
+
+target/
+.idea/
+*.iml
+
+.vscode/
+
+.DS_Store
+
+*.log
