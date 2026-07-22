@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: quarkus-config
+  namespace: {{ .Release.Namespace }}
+
+data:
+
+  QUARKUS_DATASOURCE_JDBC_URL: "{{ .Values.config.datasource.jdbcUrl }}"
+
+  QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION: "{{ .Values.config.hibernate.generation }}"
+
+  QUARKUS_FLYWAY_MIGRATE_AT_START: "{{ .Values.config.flyway.migrateAtStart }}"

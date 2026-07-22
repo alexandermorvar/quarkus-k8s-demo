@@ -1,0 +1,5 @@
+ALTER TABLE persona
+    ADD COLUMN activo BOOLEAN NOT NULL DEFAULT TRUE;
+
+ALTER TABLE persona
+    ADD COLUMN fecha_eliminacion TIMESTAMP;

@@ -1,0 +1,99 @@
+replicaCount: 2
+
+image:
+  repository: serafan/quarkus-k8s-demo
+  tag: "1.0.1"
+  pullPolicy: Never
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+
+  requests:
+    cpu: 250m
+    memory: 512Mi
+
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+
+ingress:
+
+  enabled: true
+
+  host: quarkus.local
+
+config:
+
+  datasource:
+
+    jdbcUrl: jdbc:postgresql://quarkus-demo-postgresql:5432/personasdb
+
+  hibernate:
+
+    generation: validate
+
+  flyway:
+
+    migrateAtStart: "true"
+
+postgres:
+
+  database: personasdb
+
+  username: quarkus
+
+  password: quarkus123
+
+ingress:
+
+  enabled: true
+
+  className: traefik
+
+  host: quarkus.local
+
+  path: /
+
+  pathType: Prefix
+
+autoscaling:
+
+  enabled: true
+
+  minReplicas: 2
+
+  maxReplicas: 5
+
+  targetCPUUtilizationPercentage: 50
+
+monitoring:
+
+  enabled: true
+
+  release: monitoring
+
+  interval: 15s
+
+  path: /q/metrics
+
+  port: http
+
+postgresql:
+
+  auth:
+    username: quarkus
+
+    password: quarkus123
+
+    database: personasdb
+
+  primary:
+
+    persistence:
+
+      enabled: true
+
+      size: 2Gi

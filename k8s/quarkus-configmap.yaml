@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: quarkus-config
+  namespace: quarkus-demo
+
+data:
+
+  QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://postgres:5432/personasdb
+
+  QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION: validate
+
+  QUARKUS_FLYWAY_MIGRATE_AT_START: "true"
+
+  QUARKUS_LOG_LEVEL: INFO

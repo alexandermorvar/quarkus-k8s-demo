@@ -1,0 +1,19 @@
+apiVersion: v2
+
+name: quarkus
+
+description: Quarkus Demo
+
+type: application
+
+version: 0.1.0
+
+appVersion: "1.0.1"
+
+dependencies:
+
+  - name: postgresql
+
+    version: 18.8.0
+
+    repository: https://charts.bitnami.com/bitnami
