@@ -33,5 +33,5 @@ jobs:
           context: .
           push: true
           tags: |
-            serafan/quarkus-k8s-demo:latest
-            serafan/quarkus-k8s-demo:${{ github.sha }}
+            chrisqhapaq/quarkus-k8s-demo:latest
+            chrisqhapaq/quarkus-k8s-demo:${{ github.sha }}
