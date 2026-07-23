@@ -1,8 +1,13 @@
 replicaCount: 2
 
 image:
+<<<<<<< HEAD
   repository: serafan/quarkus-k8s-demo
   tag: "cdc64a420d12ee37aa96fc28af93ad8771e7fc98"
+=======
+  repository: chrisqhapaq/quarkus-k8s-demo
+  tag: latest
+>>>>>>> fc2b932 (Nueva funcionalidad_02)
   pullPolicy: Always
 
 service:
