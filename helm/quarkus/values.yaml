@@ -2,8 +2,8 @@ replicaCount: 2
 
 image:
   repository: serafan/quarkus-k8s-demo
-  tag: "1.0.1"
-  pullPolicy: Never
+  tag: latest
+  pullPolicy: Always
 
 service:
   type: ClusterIP
