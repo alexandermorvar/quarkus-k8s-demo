@@ -89,6 +89,6 @@ public class PersonaController {
     @Path("/version")
     @Produces(MediaType.TEXT_PLAIN)
     public String version() {
-        return "Version 1.0.3";
+        return "Version 1.0.4";
     }
 }
