@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: serafan/quarkus-k8s-demo
-  tag: latest
+  tag: "cdc64a420d12ee37aa96fc28af93ad8771e7fc98"
   pullPolicy: Always
 
 service:
