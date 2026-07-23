@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: quarkus-k8s-demo
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/alexandermorvar/quarkus-k8s-demo.git
+    targetRevision: master
+    path: helm/quarkus
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: quarkus-demo
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true

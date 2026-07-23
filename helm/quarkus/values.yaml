@@ -61,7 +61,7 @@ ingress:
 
 autoscaling:
 
-  enabled: true
+  enabled: false
 
   minReplicas: 2
 
@@ -71,9 +71,11 @@ autoscaling:
 
 monitoring:
 
-  enabled: true
+  enabled: false
 
   release: monitoring
+  
+  namespace: monitoring
 
   interval: 15s
 
