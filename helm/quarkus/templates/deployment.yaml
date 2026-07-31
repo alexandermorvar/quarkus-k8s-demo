@@ -46,7 +46,7 @@ spec:
           envFrom:
 
             - configMapRef:
-                name: quarkus-config
+                name: {{ include "quarkus.fullname" . }}-config
 
           env:
 

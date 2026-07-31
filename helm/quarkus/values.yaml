@@ -19,12 +19,6 @@ resources:
     cpu: 1000m
     memory: 1Gi
 
-ingress:
-
-  enabled: true
-
-  host: quarkus.local
-
 config:
 
   datasource:

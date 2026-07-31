@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 
 metadata:
-  name: quarkus-config
+  name: {{ include "quarkus.fullname" . }}-config
   namespace: {{ .Release.Namespace }}
 
 data:
