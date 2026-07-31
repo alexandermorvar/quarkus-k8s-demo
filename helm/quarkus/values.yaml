@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: chrisqhapaq/quarkus-k8s-demo
-  tag: "1de58668963dc5b8b57e8550ed558b982acfa542"
+  tag: "e7c943c9723d2d7aacf06e17974d8af577498f2a"
   pullPolicy: Always
 
 service:
