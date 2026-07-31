@@ -7,7 +7,8 @@ metadata:
 
 data:
 
-  QUARKUS_DATASOURCE_JDBC_URL: "{{ .Values.config.datasource.jdbcUrl }}"
+  QUARKUS_DATASOURCE_JDBC_URL: >-
+    jdbc:postgresql://{{ .Release.Name }}-postgresql:5432/{{ .Values.postgresql.auth.database }}
 
   QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION: "{{ .Values.config.hibernate.generation }}"
 

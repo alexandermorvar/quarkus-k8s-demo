@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: quarkus
+  name: {{ include "quarkus.fullname" . }}
   namespace: {{ .Release.Namespace }}
 
 spec:

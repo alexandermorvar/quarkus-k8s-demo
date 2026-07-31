@@ -29,7 +29,7 @@ config:
 
   datasource:
 
-    jdbcUrl: jdbc:postgresql://quarkus-demo-postgresql:5432/personasdb
+    jdbcUrl: personasdb
 
   hibernate:
 
